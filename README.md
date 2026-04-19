@@ -71,7 +71,7 @@ toolbox sysinfo
 
 ## 👩‍💻 Developer Workflow
 
-This toolbox is designed to be extensible. We've included automation for contributors to maintain the package.
+This toolbox is designed to be extensible. I've included automation for contributors to maintain the package.
 
 ### Publishing to PyPI
 Ensure your version is updated in `pyproject.toml` and your `.pypirc` is configured, then run:
