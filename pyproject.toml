@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-instant-toolbox"
+version = "0.1.0"
+authors = [
+  { name="CLI Developer", email="author@example.com" },
+]
+description = "A command-line script toolbox for essential Python automation tasks."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.0.0",
+    "psutil>=5.9.0",
+]
+
+[project.scripts]
+toolbox = "my_instant_toolbox.cli:app"
