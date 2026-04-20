@@ -1,6 +1,6 @@
 # 🧰 My Instant Toolbox (Advanced v0.2.0)
 
-[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg)](https://pypi.org/project/my-instant-toolbox/)
+[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg?v=0.2.0)](https://pypi.org/project/my-instant-toolbox/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **My Instant Toolbox** is a professional-grade CLI automation suite. Version 0.2.0 introduces a live system dashboard, regex search-replace, incremental backups, and a suite of diagnostic tools.
