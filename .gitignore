@@ -24,3 +24,8 @@ Thumbs.db
 # Private tokens/configs
 .pypirc
 .env
+
+# Toolbox specific
+*.bak
+.toolbox_undo.json
+.toolbox_manifest_*.json
