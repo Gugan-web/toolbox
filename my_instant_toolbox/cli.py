@@ -12,7 +12,7 @@ from my_instant_toolbox.commands import (
 )
 
 console = Console()
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 
 BANNER = """
 [bold cyan]

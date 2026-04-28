@@ -1,13 +1,13 @@
-# 🧰 My Instant Toolbox (Advanced v0.2.0)
+# 🧰 My Instant Toolbox (Advanced v0.2.1)
 
-[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg?v=0.2.0)](https://pypi.org/project/my-instant-toolbox/)
+[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg?v=0.2.1)](https://pypi.org/project/my-instant-toolbox/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**My Instant Toolbox** is a professional-grade CLI automation suite. Version 0.2.0 introduces a live system dashboard, regex search-replace, incremental backups, and a suite of diagnostic tools.
+**My Instant Toolbox** is a professional-grade CLI automation suite. Version 0.2.1 introduces a live system dashboard, regex search-replace, incremental backups, and a suite of diagnostic tools.
 
 ---
 
-## ✨ v0.2.0 Highlights
+## ✨ v0.2.1 Highlights
 
 | Feature | Description |
 | :--- | :--- |
@@ -67,7 +67,7 @@ toolbox text README.md --top 10
 
 ---
 
-## 📑 Changelog (v0.2.0)
+## 📑 Changelog (v0.2.1)
 - **New Command**: `hash` for checksum verification.
 - **New Command**: `text` for file statistics and frequency analysis.
 - **New Command**: `doctor` for environment health checks.
