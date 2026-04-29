@@ -1,13 +1,13 @@
-# 🧰 My Instant Toolbox (Advanced v0.2.1)
+# 🧰 My Instant Toolbox (Advanced v0.2.3)
 
-[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg?v=0.2.1)](https://pypi.org/project/my-instant-toolbox/)
+[![PyPI version](https://img.shields.io/pypi/v/my-instant-toolbox.svg?v=0.2.3)](https://pypi.org/project/my-instant-toolbox/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**My Instant Toolbox** is a professional-grade CLI automation suite. Version 0.2.1 introduces a live system dashboard, regex search-replace, incremental backups, and a suite of diagnostic tools.
+**My Instant Toolbox** is a professional-grade CLI automation suite. Version 0.2.3 introduces a live system dashboard, regex search-replace, incremental backups, and a suite of diagnostic tools.
 
 ---
 
-## ✨ v0.2.1 Highlights
+## ✨ v0.2.3 Highlights
 
 | Feature | Description |
 | :--- | :--- |
@@ -67,7 +67,7 @@ toolbox text README.md --top 10
 
 ---
 
-## 📑 Changelog (v0.2.1)
+## 📑 Changelog (v0.2.3)
 - **New Command**: `hash` for checksum verification.
 - **New Command**: `text` for file statistics and frequency analysis.
 - **New Command**: `doctor` for environment health checks.
@@ -75,21 +75,6 @@ toolbox text README.md --top 10
 - **Improved**: `backup` supports `--incremental` mode and custom exclusions.
 - **Improved**: `find-replace` now supports `--regex` and `--ignore-case`.
 - **UX**: Added ASCII banner, version flag, and beautiful Rich progress bars.
-
----
-
-## 👩‍💻 Developer Workflow
-This toolbox is designed to be extensible. We've included automation for maintenance and publishing.
-
-### Publishing to PyPI
-Ensure your version is updated in `pyproject.toml` and your `.pypirc` is configured, then run:
-```bash
-# Test the build process
-toolbox publish --dry-run
-
-# Build and upload to PyPI
-toolbox publish
-```
 
 ---
 

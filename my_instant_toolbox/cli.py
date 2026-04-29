@@ -139,7 +139,7 @@ def doctor():
     """Check environment health and dependencies."""
     env_doctor.run_doctor()
 
-@app.command()
+@app.command(hidden=True)
 def publish(
     dry_run: bool = typer.Option(False, "--dry-run", help="Build the package without uploading"),
 ):
