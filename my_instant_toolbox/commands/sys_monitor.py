@@ -11,21 +11,43 @@ from rich.progress import BarColumn, Progress, TextColumn
 console = Console()
 
 def get_sys_data():
-    """Fetches system metrics."""
+    """Fetches system metrics with accurate CPU sampling."""
+    # First call to initialize CPU counters for overall and processes
+    psutil.cpu_percent(interval=None)
+    
+    # Get all process objects
+    procs_objs = []
+    for p in psutil.process_iter(['pid', 'name']):
+        try:
+            # Initialize process CPU counter
+            p.cpu_percent(interval=None)
+            procs_objs.append(p)
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
+            
+    # Wait a small interval for sampling
+    time.sleep(0.1)
+    
+    # Get overall CPU percentage
     cpu_overall = psutil.cpu_percent(interval=None)
     cpu_per_core = psutil.cpu_percent(interval=None, percpu=True)
+    
+    # Get process CPU percentages
+    procs_info = []
+    for p in procs_objs:
+        try:
+            info = p.info.copy()
+            info['cpu_percent'] = p.cpu_percent(interval=None)
+            procs_info.append(info)
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
+            
+    # Sort and take top 5
+    top_procs = sorted(procs_info, key=lambda x: x.get('cpu_percent', 0), reverse=True)[:5]
+    
     memory = psutil.virtual_memory()
     disk = psutil.disk_partitions()
     net = psutil.net_io_counters()
-    
-    # Get top 5 processes by CPU
-    procs = []
-    for p in psutil.process_iter(['pid', 'name', 'cpu_percent']):
-        try:
-            procs.append(p.info)
-        except (psutil.NoSuchProcess, psutil.AccessDenied):
-            pass
-    top_procs = sorted(procs, key=lambda x: x['cpu_percent'], reverse=True)[:5]
     
     return cpu_overall, cpu_per_core, memory, disk, net, top_procs
 
