@@ -12,7 +12,7 @@ from my_instant_toolbox.commands import (
 )
 
 console = Console()
-VERSION = "0.2.3"
+VERSION = "0.2.5"
 
 BANNER = r"""
 [bold cyan]
@@ -31,7 +31,7 @@ BANNER = r"""
     | | (_) | (_) | | |_) | (_) >  < 
     |_|\___/ \___/|_|_.__/ \___/_/\_\
                                      
-            [bold white]v0.2.3 - Advanced CLI Suite[/]
+            [bold white]v0.2.5 - Advanced CLI Suite[/]
 [/]
 """
 
